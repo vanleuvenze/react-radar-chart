@@ -1,0 +1,39 @@
+:root {
+	/* dream color scheme*/
+	--dream-purple: #a9a0e3;
+	--dream-light-purple: #84a2e3;
+	--dream-blue: #73badd;
+	--dream-aqua: #64ce96;
+	--dream-green: #86d673;
+
+	/* mute color scheme */
+	--mute-blue: #d3f1f4;
+	--mute-blue-pink: #d4e2e5;
+	--mute-lighter-pink: #d5d3d6;
+	--mute-light-pink: #d6c2c6;
+	--mute-pink: #d2b0b3;
+	
+	/* pastel color scheme */
+	--pastel-orange: #f6d2b4;
+	--pastel-lavender: #dbe5fb;
+	--pastel-yellow: #f6f5ca;
+	--pastel-purple: #cbc9e1;
+	--pastel-pink: #ffe3e3;
+}
+
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgContainer {
+	width: 500px;
+	height: 500px;
+	background: orange;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

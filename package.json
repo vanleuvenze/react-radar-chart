@@ -1,0 +1,41 @@
+{
+  "name": "react-radar-chart",
+  "version": "1.0.0",
+  "description": "A simple radar chart React component",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node_modules/.bin/webpack --config webpack/webpack.config.dev.js",
+    "start": "npm run compile && node devServer.js"
+  },
+  "keywords": [
+    "react",
+    "radar",
+    "chart",
+    "graph"
+  ],
+  "author": "Zachary Dean",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "koa": "^2.4.1",
+    "koa-logger": "^3.1.0",
+    "koa-send": "^4.1.2",
+    "koa-webpack-middleware": "^1.0.7",
+    "postcss-loader": "^2.0.10",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-hot-middleware": "^2.21.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0"
+  }
+}
