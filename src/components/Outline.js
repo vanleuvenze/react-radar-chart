@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../styles.css';
 
 const Outline = ({coordinates}) => (
@@ -17,5 +18,9 @@ const Outline = ({coordinates}) => (
 		);
 	})
 );
+
+Outline.propTypes = {
+	coordinates: PropTypes.array
+};
 
 export default Outline;

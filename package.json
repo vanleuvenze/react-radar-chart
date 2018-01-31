@@ -36,6 +36,7 @@
     "webpack-hot-middleware": "^2.21.0"
   },
   "dependencies": {
+    "prop-types": "^15.6.0",
     "react": "^16.2.0"
   }
 }

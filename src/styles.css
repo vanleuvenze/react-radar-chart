@@ -12,7 +12,7 @@
 	--mute-lighter-pink: #d5d3d6;
 	--mute-light-pink: #d6c2c6;
 	--mute-pink: #d2b0b3;
-	
+
 	/* pastel color scheme */
 	--pastel-orange: #f6d2b4;
 	--pastel-lavender: #dbe5fb;
@@ -36,4 +36,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.label {
+
 }

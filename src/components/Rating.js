@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../styles.css';
 
 const Rating = ({coordinates}) => (
@@ -11,5 +12,9 @@ const Rating = ({coordinates}) => (
 		fill="none"
 		/>
 );
+
+Rating.propTypes = {
+	coordinates: PropTypes.array
+};
 
 export default Rating;
