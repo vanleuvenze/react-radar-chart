@@ -48,7 +48,7 @@ const RadarChart = ({rungs=10, width=500, attributes=defaultAttributes}) => {
 RadarChart.propTypes = {
 	attributes: PropTypes.object,
 	rungs: PropTypes.number,
-	width: PropTypes.width
+	width: PropTypes.number
 };
 
 RadarChart.defaultProps = {
