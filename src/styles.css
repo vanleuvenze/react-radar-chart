@@ -30,6 +30,7 @@
 }
 
 .svgContainer {
+	position: relative;
 	width: 500px;
 	height: 500px;
 	background: orange;
@@ -39,5 +40,6 @@
 }
 
 .label {
-
+	position: absolute;
+	font-size: 20px;
 }
