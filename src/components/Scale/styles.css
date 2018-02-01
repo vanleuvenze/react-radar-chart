@@ -1,0 +1,240 @@
+.scaleContainer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.scaleWrapper {
+	position: absolute;
+	display: flex;
+}
+
+.scaleWrapperVertical {
+	composes: scaleWrapper;
+	height: 50%;
+}
+
+.scaleWrapperHorizontal {
+	composes: scaleWrapper;
+	flex-direction: column;
+	width: 50%;
+}
+
+.scaleWrapperTop {
+	composes: scaleWrapperHorizontal;
+	text-align: bottom;
+	top: -60px;
+}
+
+.scaleWrapperRight {
+	composes: scaleWrapperVertical;
+	text-align: left;
+	right: -60px;
+}
+
+.scaleWrapperBottom {
+	composes: scaleWrapperHorizontal;
+	text-align: top;
+	bottom: -60px;
+}
+
+.scaleWrapperLeft {
+	composes: scaleWrapperVertical;
+	text-align: right;
+	left: -60px;
+}
+
+.scaleWrapperTopRight {
+	composes: scaleWrapperTop;
+	right: 0;
+}
+
+.scaleWrapperTopLeft {
+	composes: scaleWrapperTop;
+}
+
+.scaleWrapperBottomLeft {
+	composes: scaleWrapperBottom;
+}
+
+.scaleWrapperBottomRight {
+	composes: scaleWrapperBottom;
+	right: 0;
+}
+
+.scaleWrapperRightTop {
+	composes: scaleWrapperRight;
+}
+
+.scaleWrapperRightBottom {
+	composes: scaleWrapperRight;
+	bottom: 0;
+}
+
+.scaleWrapperLeftTop {
+	composes: scaleWrapperLeft;
+}
+
+.scaleWrapperLeftBottom {
+	composes: scaleWrapperLeft;
+	bottom: 0;
+}
+
+.scale {
+	display: flex;
+}
+
+.scaleVertical {
+	composes: scale;
+	flex-direction: column;
+	height: 100%;
+}
+
+.scaleHorizontal {
+	composes: scale;
+	width: 100%;
+}
+
+.scaleTop {
+	border-top: 1px solid grey;
+}
+
+.scaleRight {
+	border-right: 1px solid grey;
+}
+
+.scaleBottom {
+	border-bottom: 1px solid grey;
+}
+
+.scaleLeft {
+	border-left: 1px solid grey;
+}
+
+.scaleTopLeft {
+	composes: scaleHorizontal;
+	composes: scaleTop;
+}
+
+.scaleTopRight {
+	composes: scaleHorizontal;
+	composes: scaleTop;
+	right: 0;
+}
+
+.scaleRightTop {
+	composes: scaleVertical;
+	composes: scaleRight;
+}
+
+.scaleRightBottom {
+	composes: scaleVertical;
+	composes: scaleRight;
+	bottom: 0;
+}
+
+.scaleBottomLeft {
+	composes: scaleHorizontal;
+	composes: scaleBottom;
+}
+
+.scaleBottomRight {
+	composes: scaleHorizontal;
+	composes: scaleBottom;
+	right: 0;
+}
+
+.scaleLeftTop {
+	composes: scaleVertical;
+	composes: scaleLeft;
+}
+
+.scaleLeftBottom {
+	composes: scaleVertical;
+	composes: scaleLeft;
+	bottom: 0;
+}
+
+.scaleDegreeHorizontal {
+	width: 10px;
+	border-top: .5px solid grey;
+}
+
+.scaleDegreeHorizontal:first-child {
+	border-top: 0;
+}
+
+.scaleDegreeVertical {
+	height: 10px;
+	border-left: .5px solid grey;
+}
+
+.scaleDegreeVertical:first-child {
+	border-left: 0;
+}
+
+.label {
+	padding: 2px;
+}
+
+.labelVertical {
+	display: flex;
+	justify-content: space-between;
+}
+
+.labelHorizontal {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.labelTopRight {
+	composes: labelVertical;
+}
+
+.labelTopLeft {
+	composes: labelVertical;
+}
+
+.labelTopLeft .label:first-child {
+	order: 2;
+}
+
+.labelRightTop {
+	composes: labelHorizontal;
+}
+
+.labelRightTop .label:first-child {
+	order: 2;
+}
+
+.labelRightBottom {
+	composes: labelHorizontal;
+	order: 2;
+}
+
+.labelBottomLeft {
+	composes: labelVertical;
+	order: 2;
+}
+
+.labelBottomLeft .label:first-child {
+	order: 2;
+}
+
+.labelBottomRight {
+	composes: labelVertical;
+	order: 2;
+}
+
+.labelLeftTop {
+	composes: labelHorizontal;
+}
+
+.labelLeftTop .label:first-child {
+	order: 2;
+}
+
+.labelLeftBottom {
+	composes: labelHorizontal;
+}

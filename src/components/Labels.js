@@ -22,7 +22,6 @@ function getQuadrant (angle) {
 
 function getTextPosition(angle, coordinates) {
 	const quadrant = getQuadrant(angle);
-	console.log('getting for', angle, quadrant);
 	return repositionRules[quadrant](...coordinates);
 }
 
