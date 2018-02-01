@@ -18,6 +18,7 @@ const defaultAttributes = {
 	eeeee: 3
 };
 
+
 const RadarChart = ({attributes, scaleAlign, classNames, rungs, width}) => {
 	const centerPoint = (width / 2);
 	const {axisCoordinates, outlineCoordinates, ratingCoordinates} = getCoordinates(centerPoint, width, rungs, attributes);
@@ -65,7 +66,7 @@ RadarChart.propTypes = {
 RadarChart.defaultProps = {
 	attributes: defaultAttributes,
 	rungs: 10,
-	scaleAlign: 'bottom-left',
+	scaleAlign: 'left-top',
 	width: 500
 };
 
