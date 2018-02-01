@@ -1,8 +1,10 @@
-import Axis from './Axis';
-import Label from './Label';
+import Axes from './Axes';
+import Labels from './Labels';
 import Outline from './Outline';
-import Rating from './Rating';
-import Rung from './Rung';
+import Ratings from './Ratings';
+import Rungs from './Rungs';
+import Scale from './Scale';
 
 
-export {Axis, Label, Outline, Rating, Rung};
+
+export {Axes, Labels, Outline, Ratings, Rungs, Scale};

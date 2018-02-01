@@ -1,8 +1,11 @@
 import React from 'react'
 import { render } from 'react-dom'
 import RadarChart from './index.js';
+import styles from './styles.css';
 
 const root = document.createElement('div');
+root.className = styles.root;
+
 
 document.body.appendChild(root);
 

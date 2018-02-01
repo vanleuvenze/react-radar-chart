@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles.css';
 
-const Outline = ({coordinates}) => (
-	coordinates.map((tuple, index) => {
-		const next = index === coordinates.length - 1 ? coordinates[0] : coordinates[index + 1];
+const Outline = ({coordinateGroup}) => (
+	coordinateGroup.map((coordinates, index) => {
+		const next = index === coordinateGroup.length - 1 ? coordinateGroup[0] : coordinateGroup[index + 1];
 		return (
-			<line 
-				key={`outline-${index}`} 
-				x1={tuple[0]} 
-				y1={tuple[1]} 
-				x2={next[0]} 
-				y2={next[1]} 
-				strokeWidth="2" 
+			<line
+				key={`outline-point-${index}`}
+				x1={coordinates[0]}
+				y1={coordinates[1]}
+				x2={next[0]}
+				y2={next[1]}
+				strokeWidth="2"
 				stroke="black"
 				/>
 		);
@@ -20,7 +20,7 @@ const Outline = ({coordinates}) => (
 );
 
 Outline.propTypes = {
-	coordinates: PropTypes.array
+	coordinateGroup: PropTypes.array
 };
 
 export default Outline;

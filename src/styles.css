@@ -21,22 +21,168 @@
 	--pastel-pink: #ffe3e3;
 }
 
+.root {
+	width: 80%;
+	margin: 40px auto;
+}
 
-.container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.wrapper {
+	padding: 20px;
 }
 
 .svgContainer {
 	position: relative;
-	width: 500px;
-	height: 500px;
-	background: orange;
+}
+
+.scaleContainer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.scale {
+	position: absolute;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+}
+
+.scaleVertical {
+	flex-direction: column;
+	height: 50%;
+}
+
+.scaleHorizontal {
+	width: 50%;
+}
+
+.scaleTop {
+	border-top: 1px solid grey;
+	top: -20px;
+}
+
+.scaleRight {
+	border-right: 1px solid grey;
+	right: -20px;
+}
+
+.scaleBottom {
+	border-bottom: 1px solid grey;
+	bottom: -20px;
+}
+
+.scaleLeft {
+	border-left: 1px solid grey;
+	left: -20px;
+}
+
+.scaleTopLeft {
+	composes: scale;
+	composes: scaleHorizontal;
+	composes: scaleTop;
+}
+
+.scaleTopRight {
+	composes: scale;
+	composes: scaleHorizontal;
+	composes: scaleTop;
+	right: 0;
+}
+
+.scaleRightTop {
+	composes: scale;
+	composes: scaleVertical;
+	composes: scaleRight;
+}
+
+.scaleRightBottom {
+	composes: scale;
+	composes: scaleVertical;
+	composes: scaleRight;
+	bottom: 0;
+}
+
+.scaleBottomLeft {
+	composes: scale;
+	composes: scaleHorizontal;
+	composes: scaleBottom;
+}
+
+.scaleBottomRight {
+	composes: scale;
+	composes: scaleHorizontal;
+	composes: scaleBottom;
+	right: 0;
+}
+
+.scaleLeftTop {
+	composes: scale;
+	composes: scaleVertical;
+	composes: scaleLeft;
+}
+
+.scaleLeftBottom {
+	composes: scale;
+	composes: scaleVertical;
+	composes: scaleLeft;
+	bottom: 0;
+}
+
+.scaleDegree {
+	position: absolute;
+	border-bottom: 1px solid grey;
+}
+
+.scaleDegreeHorizontal {
+	width: 10px;
+	border-top: 1px solid grey;
+}
+
+.scaleDegreeVertical {
+	height: 10px;
+	border-left: 1px solid grey;
+}
+
+.scaleDegreeTopLeft {
+	composes: scaleDegreeVertical;
+
+}
+
+.scaleDegreeTopRight {
+	composes: scaleDegreeVertical;
+
+}
+
+.scaleDegreeRightTop {
+	composes: scaleDegreeHorizontal;
+
+}
+
+.scaleDegreeRightBottom {
+	composes: scaleDegreeHorizontal;
+
+}
+
+.scaleDegreeBottomLeft {
+	composes: scaleDegreeVertical;
+
+}
+
+.scaleDegreeBottomRight {
+	composes: scaleDegreeVertical;
+
+}
+
+.scaleDegreeLeftTop {
+	composes: scaleDegreeHorizontal;
+
+}
+
+.scaleDegreeLeftBottom {
+	composes: scaleDegreeHorizontal;
+
+}
+
+.svgParent {
+	overflow: visible;
 }
 
 .label {
