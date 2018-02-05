@@ -1,49 +1,45 @@
-.scaleContainer {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-}
-
 .scaleWrapper {
 	position: absolute;
 	display: flex;
 }
 
+/* base style for wrapper when scale is on the right or on the left */
 .scaleWrapperVertical {
 	composes: scaleWrapper;
 	height: 50%;
 }
 
+/* base style for wrapper when scale is on the top or on the bottom */
 .scaleWrapperHorizontal {
 	composes: scaleWrapper;
 	flex-direction: column;
 	width: 50%;
 }
 
+/* styles for wrapper in each alignment (top, right, bottom, left) */
 .scaleWrapperTop {
 	composes: scaleWrapperHorizontal;
-	text-align: bottom;
-	top: -60px;
+	top: -55px;
 }
 
 .scaleWrapperRight {
 	composes: scaleWrapperVertical;
 	text-align: left;
-	right: -60px;
+	right: -55px;
 }
 
 .scaleWrapperBottom {
 	composes: scaleWrapperHorizontal;
-	text-align: top;
-	bottom: -60px;
+	bottom: -55px;
 }
 
 .scaleWrapperLeft {
 	composes: scaleWrapperVertical;
 	text-align: right;
-	left: -60px;
+	left: -55px;
 }
 
+/* styles for wrapper in each specific alignment (top-right, top-left, etc...) */
 .scaleWrapperTopRight {
 	composes: scaleWrapperTop;
 	right: 0;
@@ -80,90 +76,65 @@
 	bottom: 0;
 }
 
-.scale {
-	display: flex;
-}
-
+/* base styles for scale container when scale is on right or left */
 .scaleVertical {
-	composes: scale;
+	display: flex;
 	flex-direction: column;
 	height: 100%;
 }
 
+/* base styles for scale container when scale is on top or bottom */
 .scaleHorizontal {
-	composes: scale;
+	display: flex;
 	width: 100%;
 }
 
-.scaleTop {
-	border-top: 1px solid grey;
-}
-
-.scaleRight {
-	border-right: 1px solid grey;
-}
-
-.scaleBottom {
-	border-bottom: 1px solid grey;
-}
-
-.scaleLeft {
-	border-left: 1px solid grey;
-}
-
+/* styles for scale in each specific alignment (top-right, top-left, etc...) */
 .scaleTopLeft {
 	composes: scaleHorizontal;
-	composes: scaleTop;
+	border-top: 1px solid grey;
 }
 
 .scaleTopRight {
 	composes: scaleHorizontal;
-	composes: scaleTop;
+	border-top: 1px solid grey;
 	right: 0;
 }
 
 .scaleRightTop {
 	composes: scaleVertical;
-	composes: scaleRight;
+	border-right: 1px solid grey;
 }
 
 .scaleRightBottom {
 	composes: scaleVertical;
-	composes: scaleRight;
+	border-right: 1px solid grey;
 	bottom: 0;
 }
 
 .scaleBottomLeft {
 	composes: scaleHorizontal;
-	composes: scaleBottom;
+	border-bottom: 1px solid grey;
 }
 
 .scaleBottomRight {
 	composes: scaleHorizontal;
-	composes: scaleBottom;
+	border-bottom: 1px solid grey;
 	right: 0;
 }
 
 .scaleLeftTop {
 	composes: scaleVertical;
-	composes: scaleLeft;
+	border-left: 1px solid grey;
 }
 
 .scaleLeftBottom {
 	composes: scaleVertical;
-	composes: scaleLeft;
+	border-left: 1px solid grey;
 	bottom: 0;
 }
 
-.scaleDegreeHorizontal {
-	width: 10px;
-	border-top: .5px solid grey;
-}
-
-.scaleDegreeHorizontal:first-child {
-	border-top: 0;
-}
-
+/* base styles for the scale tick marks when scale is on top or bottom */
 .scaleDegreeVertical {
 	height: 10px;
 	border-left: .5px solid grey;
@@ -173,68 +144,82 @@
 	border-left: 0;
 }
 
+/* base styles for the scale tick marks when scale is on left or right */
+.scaleDegreeHorizontal {
+	width: 10px;
+	border-top: .5px solid grey;
+}
+
+.scaleDegreeHorizontal:first-child {
+	border-top: 0;
+}
+
+/*styles for label*/
 .label {
 	padding: 2px;
 }
 
-.labelVertical {
+/*base styles for label contaienr when scale is on top or bottom*/
+.labelContainerVertical {
 	display: flex;
 	justify-content: space-between;
 }
 
-.labelHorizontal {
+/*base styles for label contaienr when scale is on right or left*/
+.labelContainerHorizontal {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-.labelTopRight {
-	composes: labelVertical;
+/* styles for label container in each specific alignment (top-right, top-left, etc...) */
+.labelContainerTopRight {
+	composes: labelContainerVertical;
 }
 
-.labelTopLeft {
-	composes: labelVertical;
+.labelContainerTopLeft {
+	composes: labelContainerVertical;
 }
 
-.labelTopLeft .label:first-child {
+.labelContainerTopLeft .label:first-child {
 	order: 2;
 }
 
-.labelRightTop {
-	composes: labelHorizontal;
+.labelContainerRightTop {
+	composes: labelContainerHorizontal;
 }
 
-.labelRightTop .label:first-child {
+.labelContainerRightTop .label:first-child {
 	order: 2;
 }
 
-.labelRightBottom {
-	composes: labelHorizontal;
+.labelContainerRightBottom {
+	composes: labelContainerHorizontal;
 	order: 2;
 }
 
-.labelBottomLeft {
-	composes: labelVertical;
+.labelContainerBottomLeft {
+	composes: labelContainerVertical;
 	order: 2;
 }
 
-.labelBottomLeft .label:first-child {
+.labelContainerBottomLeft .label:first-child {
 	order: 2;
 }
 
-.labelBottomRight {
-	composes: labelVertical;
+.labelContainerBottomRight {
+	composes: labelContainerVertical;
 	order: 2;
 }
 
-.labelLeftTop {
-	composes: labelHorizontal;
+.labelContainerLeftTop {
+	composes: labelContainerHorizontal;
 }
 
-.labelLeftTop .label:first-child {
+.labelContainerLeftTop .label:first-child {
 	order: 2;
 }
 
-.labelLeftBottom {
-	composes: labelHorizontal;
+.labelContainerLeftBottom {
+	composes: labelContainerHorizontal;
 }

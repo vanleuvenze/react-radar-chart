@@ -6,7 +6,7 @@ const repositionRules = {
 	1: (x, y) => ({adjustedCoordinates: [x, y - 8], alignment: 'start'}),
 	2: (x, y) => ({adjustedCoordinates: [x - 8, y], alignment: 'end'}),
 	3: (x, y) => ({adjustedCoordinates: [x - 8, y + 8], alignment: 'end'}),
-	4: (x, y) => ({adjustedCoordinates: [x, y + 8], alignment: 'start'})
+	4: (x, y) => ({adjustedCoordinates: [x + 8, y + 8], alignment: 'start'})
 };
 
 function isBetween (target, lowerBound, higherBound) {
@@ -25,8 +25,7 @@ function getTextPosition(angle, coordinates) {
 	return repositionRules[quadrant](...coordinates);
 }
 
-
-const Labels =({coordinateGroup, chartWidth}) => (
+const Labels =({chartWidth, className, coordinateGroup}) => (
 	coordinateGroup.map(({coordinates, name}, i) => {
 		const angle = 360 - ((360 / coordinateGroup.length) * i);
 		const {adjustedCoordinates, alignment} = getTextPosition(angle, coordinates);
@@ -34,6 +33,7 @@ const Labels =({coordinateGroup, chartWidth}) => (
 		return (
 			<text
 				key={`axis-label-${i}`}
+				className={className}
 				x={adjustedCoordinates[0]}
 				y={adjustedCoordinates[1]}
 				textAnchor={alignment}
@@ -46,8 +46,9 @@ const Labels =({coordinateGroup, chartWidth}) => (
 
 
 Labels.propTypes = {
-	coordinateGroup: PropTypes.array,
-	chartWidth: PropTypes.number
+	chartWidth: PropTypes.number,
+	className: PropTypes.string,
+	coordinateGroup: PropTypes.array
 };
 
 export default Labels;

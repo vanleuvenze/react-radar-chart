@@ -1,4 +1,3 @@
-get all props from top going in the right places
-make it stylable via props
 get color schemes set up
-prop types in all components!
+make all but the outermost ring much lighter
+add key

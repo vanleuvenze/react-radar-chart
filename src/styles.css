@@ -28,13 +28,32 @@
 
 .wrapper {
 	padding: 20px;
+	position: relative;
 }
 
-.svgContainer {
+.container {
 	position: relative;
 }
 
 .svgParent {
 	overflow: visible;
 }
+
+.key {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.keyItem {
+	display: flex;
+	align-items: center;
+}
+
+.keyColor {
+	width: 10px;
+	height: 10px;
+	margin-right: 10px;
+}
+
 

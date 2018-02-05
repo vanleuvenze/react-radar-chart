@@ -6,7 +6,6 @@ import styles from './styles.css';
 const root = document.createElement('div');
 root.className = styles.root;
 
-
 document.body.appendChild(root);
 
 render(<RadarChart/>, root);

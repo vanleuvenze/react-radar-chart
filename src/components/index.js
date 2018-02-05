@@ -1,9 +1,9 @@
 import Axes from './Axes';
+import Key from './Key';
 import Labels from './Labels';
 import Outline from './Outline';
-import Ratings from './Ratings';
 import Rungs from './Rungs';
 import Scale from './Scale/';
 
 
-export {Axes, Labels, Outline, Ratings, Rungs, Scale};
+export {Axes, Key, Labels, Outline, Rungs, Scale};
