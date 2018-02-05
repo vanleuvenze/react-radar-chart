@@ -4,7 +4,7 @@ react-radar-chart is intended to be a simple solution for those seeking a standa
 
 ## Installation
 
-The easiest way to use react-radar-chart is to install it from npm and build it into your app with Webpack.
+The easiest way to use react-radar-chart is to install it from npm and build it into your app with Webpack. (this package is curently inactive)
 
 ```
 npm install react-radar-chart
