@@ -1,3 +1,0 @@
-get color schemes set up
-make all but the outermost ring much lighter
-add key

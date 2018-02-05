@@ -6,57 +6,39 @@ import {getAxisCoordinates, getOutlineCoordinates} from './helpers';
 
 import styles from './styles';
 
-const defaultAxisNames = ['javascript', 'react', 'postgreSQL', 'ruby', 'ES6', 'rails', 'snails', 'tails', 'bails'];
+const defaultAxisNames = ['javascript', 'react', 'postgreSQL', 'ruby', 'ES6'];
 
 const defaultGroups = {
-	zack: {
+	First: {
 		color: 'blue',
 		ratings: {
 			javascript: 9,
 			react: 9,
 			postgreSQL: 6,
 			ruby: 7,
-			ES6: 9,
-			rails: 5,
-			tails: 6,
-			snails: 8,
-			bails: 9
+			ES6: 9
 		}
 	},
-	jillrey: {
-		color: 'green',
+	Second: {
+		color: 'red',
 		ratings: {
 			javascript: 3,
 			react: 8,
 			postgreSQL: 7,
 			ruby: 9,
-			ES6: 2,
-			rails: 3,
-			tails: 3,
-			snails: 7,
-			bails: 9
+			ES6: 2
 		}
 	},
-	ralpha: {
-		color: 'red',
+	Third: {
+		color: 'green',
 		ratings: {
-			javascript: 2,
-			react: 2,
+			javascript: 10,
+			react: 4,
 			postgreSQL: 2,
-			ruby: 2,
-			ES6: 9,
-			rails: 2,
-			tails: 7,
-			snails: 9,
-			bails: 0
+			ruby: 6,
+			ES6: 9
 		}
 	}
-};
-
-const defaultColorSchemes = {
-	1: {},
-	2: {},
-	3: {}
 };
 
 function getOutlines(className, groups, axisNames, centerPoint, width, rungs) {
@@ -95,7 +77,7 @@ const RadarChart = ({axisNames, classNames, groups, rungs, scaleAlign, scaleColo
 }
 
 RadarChart.propTypes = {
-	attributes: PropTypes.object,
+	axisNames: PropTypes.array,
 	classNames: PropTypes.shape({
 		axis: PropTypes.string,
 		container: PropTypes.string,
@@ -108,6 +90,10 @@ RadarChart.propTypes = {
 		svgParent: PropTypes.string,
 		wrapper: PropTypes.string
 	}),
+	groups: PropTypes.objectOf(PropTypes.shape({
+		color: PropTypes.string,
+		ratings: PropTypes.object
+	})),
 	rungs: PropTypes.number,
 	scaleAlign: PropTypes.oneOf([
 		'top-left',
@@ -139,7 +125,7 @@ RadarChart.defaultProps = {
 	},
 	groups: defaultGroups,
 	rungs: 10,
-	scaleAlign: 'top-left',
+	scaleAlign: 'bottom-right',
 	scaleColor: 'black',
 	scaleRenderer: props => <Scale {...props}/>,
 	width: 500
