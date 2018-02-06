@@ -1,6 +1,6 @@
 {
   "name": "react-radar-chart",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple radar chart React component",
   "main": "lib/bundle.min.js",
   "scripts": {
