@@ -1,0 +1,33 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true
+  },
+  "rules": {
+    "eqeqeq": 1,
+    "eol-last": ["error", "always"],
+    "no-dupe-keys": 2,
+    "no-var": 1,
+    "no-console": 0,
+    "no-mixed-spaces-and-tabs": 1,
+    "no-const-assign": 2,
+    "no-unused-vars": [1, {
+      "vars": "all",
+      "args": "none"
+    }],
+    "prefer-const": 1,
+    "semi": ["error", "always"],
+    "react/no-deprecated": 1,
+    "react/no-string-refs": 1,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/jsx-no-undef": 2,
+    "react/jsx-no-duplicate-props": 2,
+    "react/sort-prop-types": 1
+  },
+  "plugins": [
+    "react"
+  ]
+}

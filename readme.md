@@ -26,4 +26,4 @@ Please read [CONTRIBUTING.md](https://github.com/vanleuvenze/react-radar-chart/b
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the ISC License.

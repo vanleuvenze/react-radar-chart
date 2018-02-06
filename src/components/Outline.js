@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles.css';
 
 function getCoordinatePoints(className, coordinateGroup, color) {
 	return coordinateGroup.map((coordinates, index) => (
@@ -14,7 +13,7 @@ function getCoordinatePoints(className, coordinateGroup, color) {
 			strokeWidth="4"
 			fill="none"
 			/>
-	))
+	));
 }
 
 function getPolylinePoints(coordinateGroup) {

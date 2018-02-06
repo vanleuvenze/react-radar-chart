@@ -20,10 +20,6 @@ function getDegreeStyle(alignment, color, rungs, i) {
 	};
 }
 
-function getDisplayNumber(rungs, i) {
-	return i === 1 || i === rungs ? i : null;
-}
-
 function getScaleClassName(alignment) {
 	return styles[`scale${dashToCamel(alignment)}`];
 }
@@ -38,11 +34,7 @@ function getScaleDegreeClassName(alignment) {
 }
 
 function getWrapperClassName(alignment) {
-	return styles[`scaleWrapper${dashToCamel(alignment)}`]
-}
-
-function getContainerClassName(alignment) {
-	return styles[`scaleWrapper${dashToCamel(alignment)}`]
+	return styles[`scaleWrapper${dashToCamel(alignment)}`];
 }
 
 const Scale = ({alignment, className, color, rungs}) => (

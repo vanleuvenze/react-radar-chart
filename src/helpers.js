@@ -10,8 +10,7 @@ function getAxisCoordinates(axes, centerPoint) {
 				centerPoint + (centerPoint * Math.sin(radians))
 				],
 			name
-		}
-
+		};
 	});
 }
 

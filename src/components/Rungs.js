@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles.css';
 
 const Rungs = ({className, centerPoint, chartWidth, numRungs}) => (
 	Array.from({length: numRungs + 1}).map((n, i) => (

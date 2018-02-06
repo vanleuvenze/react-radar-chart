@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles.css';
 
 const repositionRules = {
 	1: (x, y) => ({adjustedCoordinates: [x, y - 8], alignment: 'start'}),

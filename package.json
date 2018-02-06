@@ -4,9 +4,12 @@
   "description": "A simple radar chart React component",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "node_modules/.bin/webpack --config webpack/webpack.config.dev.js",
-    "start": "npm run compile && node devServer.js"
+    "compile": "node_modules/.bin/webpack --config webpack/webpack.config.js",
+    "compile_dev": "node_modules/.bin/webpack --config webpack/webpack.config.dev.js",
+    "lint": "./node_modules/.bin/eslint src/",
+    "prepublish": "npm run compile",
+    "start": "npm run compile_dev && node devServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react",
@@ -18,12 +21,18 @@
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
     "css-loader": "^0.28.9",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "koa": "^2.4.1",
     "koa-logger": "^3.1.0",

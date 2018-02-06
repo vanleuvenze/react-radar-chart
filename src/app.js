@@ -1,6 +1,6 @@
-import React from 'react'
-import { render } from 'react-dom'
-import RadarChart from './index.js';
+import React from 'react';
+import {render} from 'react-dom';
+import RadarChart from './index';
 import styles from './styles.css';
 
 import {defaultAxisNames, defaultGroups} from './defaults';

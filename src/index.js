@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {Axes, Key, Labels, Outline, Rungs, Scale} from './components';
 import {getAxisCoordinates, getOutlineCoordinates} from './helpers';
 
-import styles from './styles';
+import styles from './styles.css';
 
 function getOutlines(className, groups, axisNames, centerPoint, width, rungs) {
 	return Object.keys(groups).map((key, i) => {
@@ -17,7 +17,7 @@ function getOutlines(className, groups, axisNames, centerPoint, width, rungs) {
 				coordinateGroup={getOutlineCoordinates(ratings, centerPoint, width, rungs)}
 				color={groups[key].color}
 				/>
-		)
+		);
 	});
 }
 
@@ -39,7 +39,7 @@ const RadarChart = ({axisNames, classNames, groups, rungs, scaleAlign, scaleColo
 			<Key className={classNames.key} groups={groups}/>
 		</div>
 	);
-}
+};
 
 RadarChart.propTypes = {
 	axisNames: PropTypes.array,

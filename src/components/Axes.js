@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles.css';
 
 const Axes = ({className, coordinateGroup, centerPoint}) => (
 	coordinateGroup.map(({coordinates}, i) => (
