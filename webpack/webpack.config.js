@@ -20,12 +20,13 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-       test: /\.css$/,
-       exclude: /node_modules/,
-       use: [
-        {loader: 'style-loader'},
-        {loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'}
-       ]
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'],
+        })
+
      }
    ]
   },
@@ -33,11 +34,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.css']
   },
   plugins: [
-    new ExtractTextPlugin({
-      filename: '[name].css',
-      allChunks: true,
-      ignoreOrder: true
-    }),
+    new ExtractTextPlugin('main.css'),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')

@@ -1,8 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
@@ -41,11 +38,6 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.css']
   },
   plugins: [
-    new ExtractTextPlugin({
-      filename: '[name].css',
-      allChunks: true,
-      ignoreOrder: true
-    }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
