@@ -8,8 +8,10 @@ module.exports = {
     path.resolve(ROOT_PATH, '../src/index.js')
   ],
   output: {
-    path: path.resolve(ROOT_PATH, '../lib'),
-    filename: 'bundle.min.js'
+    path: path.resolve(ROOT_PATH, '../dist'),
+    filename: 'react-radar-chart.min.js',
+    libraryTarget: 'umd',
+    library: 'react-rader-chart'
   },
   module: {
     rules: [
@@ -34,7 +36,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.css']
   },
   plugins: [
-    new ExtractTextPlugin('main.css'),
+    new ExtractTextPlugin('react-radar-chart.min.css'),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
