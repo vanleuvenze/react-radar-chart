@@ -58,6 +58,41 @@ To align in one of these areas, use the following format and pass via the scaleA
 '[edge]-[alignment]' eg. 'top-right' or 'left-bottom'
 
 
+## Groups
+
+This will be the most important prop you pass to the RadarChart component.  Use the following as a reference.
+
+```
+{
+	Player1: {
+		color: 'blue',
+		ratings: {
+			speed: 3,
+			attack: 5,
+			defense: 8
+		}
+	},
+	Player2: {
+		color: 'green',
+		ratings: {
+			speed: 10,
+			attack: 3,
+			defense: 3
+		}
+	},
+	Player3: {
+		color: 'red',
+		ratings: {
+			speed: 5,
+			attack: 5,
+			defense: 5
+		}
+	}
+}
+```
+
+**make sure that each groups' ratings are represented in the axisNames array prop.**
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/vanleuvenze/react-radar-chart/blob/master/README.md/) for details on submitting a pull request.
