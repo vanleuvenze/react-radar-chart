@@ -1,7 +1,7 @@
-node_modules
+build/
+lib/
+node_modules/
 .DS_Store
 todo.txt
-build
-lib
 defaults.js
 .npmignore

@@ -38,7 +38,7 @@
     "koa-logger": "^3.1.0",
     "koa-send": "^4.1.2",
     "koa-webpack-middleware": "^1.0.7",
-    "postcss-loader": "^2.0.10",
+    "postcss-loader": "^2.1.0",
     "react-dom": "^16.2.0",
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0",
