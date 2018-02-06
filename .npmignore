@@ -1,4 +1,5 @@
 buld/
 src/
 devServer.js
+defaults.js
 webpack/
