@@ -13,13 +13,13 @@ npm install react-radar-chart
 Then just import react-radar-chart into your project and you're all set!
 
 ```
-npm install react-radar-chart
+import RadarChart from 'react-radar-chart';
 ```
 
 ## Props
 
 | Property       | Type            | Default 					 |Description																																																																	   |
-| :------------: | :-------------: | :---------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: |
+| -------------- | --------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 |  axisNames     |  array          |  []     					 |  Array of string values that will be used as the labels for each of the radar chart axes. 																										 |
 |  classNames    |  object         |  {}     					 |  Object containing class names for the various components and sub components of the radar chart.  See 'styling' section below for details. 	 |
 |  groups        |  object         |  {}     					 |  Object containing color and rating attributes for each group, by group name {[groupName]: {[color]: 'blue', [attributes]: {[skill]: 5}}} 		 |
@@ -27,12 +27,12 @@ npm install react-radar-chart
 |  scaleAlign    |  string         |  'bottom-left'  	 |  A string indicating where to align the scale.  See 'scale alignment' section below for details. 																						 |
 |  scaleRenderer |  function       |  see description	 |  A function that can be used to render a custom chart scale.  Renders a simple scale by default. 																						 |
 
-##Styling
+## Styling
 
 Custom classNames can be passed via the classNames prop.
 
 | Class Name     | Use																																										|
-| :------------: | :------------------------------------------------------------------------------------: |
+| -------------- | -------------------------------------------------------------------------------------- |
 |  axis     		 |  change the color / thickness of the Axes																							|
 |  container     |  style the containing div 																															|
 |  key           |  change the text size or the position of the key																				|
@@ -43,7 +43,7 @@ Custom classNames can be passed via the classNames prop.
 |  svgParent 		 |  style the svgParent element																														|
 |  wrapper       |  style the wrapper div																																	|
 
-##Scale Alignment
+## Scale Alignment
 
 There are 8 areas that the scale can be aligned:
 
