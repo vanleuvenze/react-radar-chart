@@ -1,9 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
-
-var ROOT_PATH = path.resolve(__dirname);
-
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
   entry: [
@@ -46,6 +44,6 @@ module.exports = {
       }
     }),
     new webpack.NamedModulesPlugin(),
-    new webpack.optimize.UglifyJsPlugin() //minify everything
+    new webpack.optimize.UglifyJsPlugin()
   ]
 };
