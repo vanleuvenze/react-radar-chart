@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {Axes, Key, Labels, Outline, Rungs, Scale} from './components';
-import {getAxisCoordinates, getOutlineCoordinates} from './helpers';
+import {getAxisCoordinates, getOutlineCoordinates} from '../helpers';
 
-import styles from './styles.css';
+import styles from './styles/main.css';
 
 function getOutlines(className, groups, axisNames, centerPoint, width, rungs) {
 	return Object.keys(groups).map((key, i) => {

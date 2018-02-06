@@ -1,4 +1,3 @@
-const path = require('path');
 const Koa = require('koa');
 const send = require('koa-send');
 

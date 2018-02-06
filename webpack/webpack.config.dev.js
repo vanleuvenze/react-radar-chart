@@ -1,9 +1,9 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var ROOT_PATH = path.resolve(__dirname);
+const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -46,14 +46,7 @@ module.exports = {
       allChunks: true,
       ignoreOrder: true
     }),
-    new webpack.DefinePlugin({ // <-- key to reducing React's size
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.DedupePlugin(), //dedupe similar code
-    new webpack.optimize.UglifyJsPlugin() //minify everything
+    new webpack.HotModuleReplacementPlugin()
   ]
 };

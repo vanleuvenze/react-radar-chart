@@ -1,7 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ROOT_PATH = path.resolve(__dirname);
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
   entry: [

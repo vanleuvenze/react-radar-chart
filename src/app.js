@@ -1,12 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
 import RadarChart from './index';
-import styles from './styles.css';
 
-import {defaultAxisNames, defaultGroups} from './defaults';
+import {defaultAxisNames, defaultGroups} from '../defaults';
 
 const root = document.createElement('div');
-root.className = styles.root;
+root.setAttribute('style', "width: 80%; margin: 40px auto;");
 
 document.body.appendChild(root);
 
