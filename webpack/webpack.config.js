@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(ROOT_PATH, '../dist'),
     filename: 'react-radar-chart.min.js',
     libraryTarget: 'umd',
-    library: 'react-rader-chart'
+    library: 'RadarChart'
   },
   module: {
     rules: [
