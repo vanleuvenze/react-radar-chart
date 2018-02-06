@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "node_modules/.bin/webpack --config webpack/webpack.config.js",
     "compile_dev": "node_modules/.bin/webpack --config webpack/webpack.config.dev.js",
-    "lint": "./node_modules/.bin/eslint src/",
+    "lint": "./node_modules/.bin/eslint src",
     "prepublish": "npm run compile",
     "start": "npm run compile_dev && node devServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"

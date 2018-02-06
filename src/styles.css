@@ -4,11 +4,11 @@
 }
 
 .wrapper {
-	padding: 20px;
 	position: relative;
 }
 
 .container {
+	padding: 20px;
 	position: relative;
 }
 
@@ -20,6 +20,8 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	font-size: 14px;
+	font-size: 3vw;
 }
 
 .keyItem {

@@ -21,13 +21,14 @@ function getOutlines(className, groups, axisNames, centerPoint, width, rungs) {
 	});
 }
 
-const RadarChart = ({axisNames, classNames, groups, rungs, scaleAlign, scaleColor, scaleRenderer, width}) => {
+const RadarChart = ({axisNames, classNames, groups, rungs, scaleAlign, scaleColor, scaleRenderer}) => {
+	const width = 500;
 	const centerPoint = (width / 2);
 	const axisCoordinates = getAxisCoordinates(axisNames, centerPoint);
 
 	return (
-		<div className={`${styles.wrapper} ${classNames.wrapper} ${styles.defaultScheme1}`}>
-			<div className={`${styles.container} ${classNames.container}`}>
+		<div className={`${styles.container} ${classNames.container}`}>
+			<div className={`${styles.wrapper} ${classNames.wrapper}`}>
 				{scaleRenderer({alignment: scaleAlign, className: classNames.scale, rungs, color: scaleColor})}
 				<svg className={`${styles.svgParent} ${classNames.svgParent}`} viewBox={`0 0 500 500`}>
 					<Rungs className={classNames.rung} chartWidth={width} centerPoint={centerPoint} numRungs={rungs}/>
@@ -42,14 +43,13 @@ const RadarChart = ({axisNames, classNames, groups, rungs, scaleAlign, scaleColo
 };
 
 RadarChart.propTypes = {
-	axisNames: PropTypes.array,
+	axisNames: PropTypes.arrayOf(PropTypes.string),
 	classNames: PropTypes.shape({
 		axis: PropTypes.string,
 		container: PropTypes.string,
 		key: PropTypes.string,
 		label: PropTypes.string,
 		outline: PropTypes.string,
-		rating: PropTypes.string,
 		rung: PropTypes.string,
 		scale: PropTypes.string,
 		svgParent: PropTypes.string,
@@ -70,8 +70,7 @@ RadarChart.propTypes = {
 		'left-top',
 		'left-bottom',
 	]),
-	scaleRenderer: PropTypes.func,
-	width: PropTypes.number
+	scaleRenderer: PropTypes.func
 };
 
 RadarChart.defaultProps = {
@@ -92,8 +91,7 @@ RadarChart.defaultProps = {
 	rungs: 10,
 	scaleAlign: 'bottom-right',
 	scaleColor: 'black',
-	scaleRenderer: props => <Scale {...props}/>,
-	width: 500
+	scaleRenderer: props => <Scale {...props}/>
 };
 
 export default RadarChart;

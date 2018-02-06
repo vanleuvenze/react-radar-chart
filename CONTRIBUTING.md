@@ -5,9 +5,9 @@ Once the changes are discussed, the issue will be assigned to you.
 
 Once you are assigned an issue:
 
-* Fork this repository (if you havent already)
+* Fork this repository (if you havent already).
 
-* Once you have it on your local machine, point your remote branch to the upstream react-radar-chart repo.
+* When you have it on your local machine, point your remote branch to the upstream react-radar-chart repo.
 ```
 git remote add upstream https://github.com/vanleuvenze/react-radar-chart.git
 ```
@@ -38,4 +38,3 @@ git push origin some_changes
 ```
 
 * Create a pull request!
-

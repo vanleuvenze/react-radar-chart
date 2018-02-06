@@ -16,7 +16,6 @@ function getQuadrant (angle) {
 	return [[0, 90], [90, 180], [180, 270], [270, 360]].reduce((acc, range, i) => (
 		isBetween(angle, ...range) ? i + 1 : acc
 	), null);
-
 }
 
 function getTextPosition(angle, coordinates) {
