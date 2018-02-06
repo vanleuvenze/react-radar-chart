@@ -4,3 +4,4 @@ todo.txt
 build
 lib
 defaults.js
+.npmignore
