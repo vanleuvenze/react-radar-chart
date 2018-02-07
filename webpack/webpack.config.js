@@ -36,7 +36,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.css']
   },
   plugins: [
-    new ExtractTextPlugin('react-radar-chart.min.css'),
+    new ExtractTextPlugin('main.css'),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
