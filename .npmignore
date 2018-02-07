@@ -5,6 +5,7 @@ src/
 utils/
 webpack/
 .babelrc
+.eslintignore
 .eslintrc.json
 CONTRIBUTING.md
 defaults.js
