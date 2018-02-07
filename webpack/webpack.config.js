@@ -9,7 +9,9 @@ module.exports = {
   ],
   output: {
     path: path.resolve(ROOT_PATH, '../dist'),
-    filename: 'react-radar-chart.min.js'
+    filename: 'react-radar-chart.min.js',
+    libraryTarget: 'umd',
+    library: 'RadarChart'
   },
   module: {
     rules: [
