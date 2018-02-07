@@ -1,6 +1,6 @@
 {
   "name": "react-radar-chart",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A simple radar chart React component",
   "main": "dist/react-radar-chart.cjs.js",
   "jsnext:main": "dist/react-select.esm.js",
@@ -63,5 +63,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
