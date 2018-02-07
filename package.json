@@ -5,7 +5,6 @@
   "main": "dist/react-radar-chart.cjs.js",
   "jsnext:main": "dist/react-select.esm.js",
   "module": "dist/react-radar-chart.esm.js",
-  "unpkg": "dist/react-radar-chart.min.js",
   "style": "dist/react-select.min.css",
   "scripts": {
     "build": "rollup -c rollup/rollup.config.js",
