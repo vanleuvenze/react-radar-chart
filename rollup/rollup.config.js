@@ -15,7 +15,7 @@ const globals = {
 const babelOptions = {
 	babelrc: false,
 	exclude: 'node_modules/**',
-	presets: [['env', {'modules': false}], 'react', 'stage-0'],
+	presets: [['env', {'modules': false}], 'stage-0', 'react'],
 	plugins: ['external-helpers', 'transform-object-rest-spread']
 };
 
@@ -24,7 +24,7 @@ export default [
 	{
 		input: 'src/index.js',
 		output: {
-			name: 'reactRadarChart',
+			name: 'RadarChart',
 			file: pkg.unpkg,
 			format: 'umd'
 		},
@@ -41,6 +41,7 @@ export default [
 	{
 		input: 'src/index.js',
 		output: {
+			name: 'RadarChart',
 			file: pkg.module,
 			format: 'es'
 		},
@@ -56,6 +57,7 @@ export default [
 	{
 		input: 'src/index.js',
 		output: {
+			name: 'RadarChart',
 			file: pkg.main,
 			format: 'cjs'
 		},
