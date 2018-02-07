@@ -9,7 +9,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(ROOT_PATH, '../dist'),
-    filename: 'react-radar-chart.min.js',
+    filename: 'react-radar-chart.js',
     libraryTarget: 'umd',
     library: 'RadarChart'
   },
@@ -42,7 +42,6 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-    new webpack.NamedModulesPlugin(),
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.NamedModulesPlugin()
   ]
 };
