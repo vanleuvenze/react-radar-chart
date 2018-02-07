@@ -1,6 +1,7 @@
 build/
 helpers/
 node_modules/
+rollup/
 src/
 utils/
 webpack/

@@ -1,6 +1,7 @@
 import babel from 'rollup-plugin-babel';
-import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
+import resolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
 import { minify } from 'uglify-es';
 
@@ -13,7 +14,8 @@ const globals = {
 
 const babelOptions = {
 	babelrc: false,
-	presets: [['env', {'modules': false}], 'react'],
+	exclude: 'node_modules/**',
+	presets: [['env', {'modules': false}], 'react', 'stage-0'],
 	plugins: ['external-helpers', 'transform-object-rest-spread']
 };
 
@@ -62,7 +64,8 @@ export default [
 		plugins: [
 			postcss({modules: true}),
 			babel(babelOptions),
-			resolve()
+			resolve(),
+			commonjs()
 		]
 	}
 ];
