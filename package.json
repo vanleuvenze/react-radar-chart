@@ -2,7 +2,7 @@
   "name": "react-radar-chart",
   "version": "1.0.8",
   "description": "A simple radar chart React component",
-  "main": "lib/react-radar-chart.min.js",
+  "main": "dist/react-radar-chart.min.js",
   "scripts": {
     "compile": "node_modules/.bin/webpack --config webpack/webpack.config.js",
     "compile_dev": "node_modules/.bin/webpack --config webpack/webpack.config.dev.js",
