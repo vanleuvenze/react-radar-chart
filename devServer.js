@@ -6,7 +6,7 @@ const logger = require('koa-logger');
 // webpack setup
 const webpack = require('webpack');
 const {devMiddleware, hotMiddleware} = require('koa-webpack-middleware');
-const config = require('./webpack/webpack.config.dev.js');
+const config = require('./webpack/webpack.config.js');
 const compiler = webpack(config);
 
 const app = new Koa();

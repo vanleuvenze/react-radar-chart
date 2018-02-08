@@ -21,8 +21,8 @@ function getPolylinePoints(coordinateGroup) {
 }
 
 const Outline = ({className, color, coordinateGroup}) => (
-	[
-		getCoordinatePoints(className, coordinateGroup, color),
+	<g>
+		{getCoordinatePoints(className, coordinateGroup, color)}
 		<polyline
 			key={'outline'}
 			fill={color}
@@ -30,7 +30,7 @@ const Outline = ({className, color, coordinateGroup}) => (
 			fillOpacity="0.3"
 			points={getPolylinePoints(coordinateGroup)}
 			/>
-	]
+	</g>
 );
 
 Outline.propTypes = {
