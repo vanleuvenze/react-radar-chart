@@ -5,7 +5,7 @@
   "main": "dist/react-radar-chart.js",
   "jsnext:main": "dist/react-radar-chart.esm.js",
   "module": "dist/react-radar-chart.esm.js",
-  "unpkg": "dist/react-radar-chart.umd.js",
+  "unpkg": "dist/react-radar-chart.min.js",
   "style": "dist/react-radar-chart.min.css",
   "scripts": {
     "build": "rollup -c rollup/rollup.config.js",
