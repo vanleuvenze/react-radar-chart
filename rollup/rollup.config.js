@@ -13,33 +13,58 @@ const babelOptions = {
 	plugins: ['external-helpers', 'transform-object-rest-spread']
 };
 
-
-export default {
-  input: 'src/index.js',
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs'
-    },
-    {
-      file: pkg.module,
-      format: 'es'
-    }
-  ],
-  external: [
-    'react',
-    'react-dom',
-    'prop-types'
-  ],
-  plugins: [
-    postcss({
-      modules: true
-    }),
-    babel(babelOptions),
-    resolve(),
-    commonjs()
-  ]
+const globals = {
+ 'prop-types': 'PropTypes',
+ 'react': 'React',
+ 'react-dom': 'ReactDom'
 };
+
+
+export default [
+   // UMD build
+  {
+    input: 'src/index.js',
+    output: {
+     name: 'RadarChart',
+     file: pkg.unpkg,
+     format: 'umd'
+    },
+    external: Object.keys(globals),
+    globals: globals,
+    plugins: [
+     postcss({modules: true, extract: true, minimize: true}),
+     babel(babelOptions),
+     resolve(),
+     uglify({}, minify)
+    ]
+  },
+  {
+    input: 'src/index.js',
+    output: [
+      {
+        file: pkg.main,
+        format: 'cjs'
+      },
+      {
+        file: pkg.module,
+        format: 'es'
+      }
+    ],
+    external: Object.keys(globals),
+    globals: globals,
+    plugins: [
+      postcss({
+        modules: true
+      }),
+      babel(babelOptions),
+      resolve(),
+      commonjs()
+    ]
+  }
+]
+
+
+
 
 
 
