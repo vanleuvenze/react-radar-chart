@@ -1,6 +1,6 @@
 {
   "name": "react-radar-chart",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "A simple radar chart React component",
   "main": "dist/react-radar-chart.js",
   "jsnext:main": "dist/react-radar-chart.esm.js",
