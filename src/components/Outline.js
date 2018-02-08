@@ -31,6 +31,7 @@ const Outline = ({className, color, coordinateGroup}) => (
 			points={getPolylinePoints(coordinateGroup)}
 			/>
 	]
+
 );
 
 Outline.propTypes = {

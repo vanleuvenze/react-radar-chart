@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Axes, Key, Labels, Outline, Rungs, Scale} from './components';
-import {getAxisCoordinates, getOutlineCoordinates} from '../helpers';
-
+import {Axis, Key, Label, Outline, Rung, Scale} from './components/';
+import {getAxisCoordinates, getOutlineCoordinates, getAxisLabelPosition} from '../helpers';
+// import array from 'array.from';
 import styles from './styles/main.css';
 
 function getOutlines(className, groups, axisNames, centerPoint, width, rungs) {
@@ -21,6 +21,52 @@ function getOutlines(className, groups, axisNames, centerPoint, width, rungs) {
 	});
 }
 
+function getLabels(className, coordinateGroup) {
+	return coordinateGroup.map(({coordinates, name}, i) => {
+		const angle = 360 - ((360 / coordinateGroup.length) * i);
+		const {adjustedCoordinates, alignment} = getAxisLabelPosition(angle, coordinates);
+
+		return (
+			<Label
+				key={`axis-label-${i}`}
+				className={className}
+				alignment={alignment}
+				coordinates={adjustedCoordinates}
+				text={name}
+				/>
+		);
+	})
+}
+
+function getRungs(className, rungs, centerPoint, width) {
+	return Array.from({length: rungs + 1}).map((n, i) => {
+		const radius = i * (width / rungs) / 2;
+
+		return (
+			<Rung
+				key={`rung-${i}`}
+				className={className}
+				centerPoint={centerPoint}
+				radius={radius}
+				/>
+		);
+	});
+}
+
+function getAxes(className, axisCoordinates, centerPoint) {
+	return axisCoordinates.map(({coordinates}, i) => {
+
+		return (
+			<Axis
+				key={`axis-${i}`}
+				className={className}
+				centerPoint={centerPoint}
+				coordinates={coordinates}
+				/>
+		);
+	});
+}
+
 const RadarChart = ({axisNames, classNames, groups, rungs, scaleAlign, scaleColor, scaleRenderer}) => {
 	const width = 500;
 	const centerPoint = (width / 2);
@@ -31,9 +77,9 @@ const RadarChart = ({axisNames, classNames, groups, rungs, scaleAlign, scaleColo
 			<div className={`${styles.wrapper} ${classNames.wrapper}`}>
 				{scaleRenderer({alignment: scaleAlign, className: classNames.scale, rungs, color: scaleColor})}
 				<svg className={`${styles.svgParent} ${classNames.svgParent}`} viewBox={`0 0 500 500`}>
-					<Rungs className={classNames.rung} chartWidth={width} centerPoint={centerPoint} numRungs={rungs}/>
-					<Axes className={classNames.axis} centerPoint={centerPoint} coordinateGroup={axisCoordinates}/>
-					<Labels className={classNames.label} coordinateGroup={axisCoordinates} chartWidth={width}/>
+					{getRungs(classNames.rung, rungs, centerPoint, width)}
+					{getAxes(classNames.axis, axisCoordinates, centerPoint)}
+					{getLabels(classNames.label, axisCoordinates)}
 					{getOutlines(classNames.outline, groups, axisNames, centerPoint, width, rungs)}
 				</svg>
 			</div>

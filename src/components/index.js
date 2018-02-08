@@ -1,9 +1,8 @@
-import Axes from './Axes';
+import Axis from './Axis';
 import Key from './Key';
-import Labels from './Labels';
+import Label from './Label';
 import Outline from './Outline';
-import Rungs from './Rungs';
+import Rung from './Rung';
 import Scale from './Scale';
 
-
-export {Axes, Key, Labels, Outline, Rungs, Scale};
+export {Axis, Key, Label, Outline, Rung, Scale};

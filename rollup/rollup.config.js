@@ -3,16 +3,17 @@ import commonjs from 'rollup-plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 
+
 import pkg from '../package.json'
 
 
 const babelOptions = {
 	babelrc: false,
 	exclude: 'node_modules/**',
-	presets: [['env', {'modules': false}], 'stage-0', 'react'],
-	plugins: ['external-helpers', 'transform-object-rest-spread']
+  presets: [['env', {'modules': false}], 'stage-0', 'react'],
+  plugins: ['external-helpers', 'transform-object-rest-spread', 'transform-runtime'],
+  runtimeHelpers: true
 };
-
 
 export default {
   input: 'src/index.js',
@@ -37,7 +38,7 @@ export default {
     }),
     babel(babelOptions),
     resolve(),
-    commonjs()
+    commonjs(),
   ]
 }
 

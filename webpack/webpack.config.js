@@ -19,10 +19,7 @@ module.exports = {
         test: /\.js?/,
         exclude: /node_modules/,
         enforce: 'pre',
-        loader: 'babel-loader',
-        options: {
-          presets: ['react-hmre']
-        }
+        loader: 'babel-loader'
       },
       {
        test: /\.css$/,

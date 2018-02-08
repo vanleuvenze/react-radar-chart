@@ -1,4 +1,4 @@
 {
-  "presets": ["react", "env"],
+  "presets": ["react", "env", "react-hmre"],
   "plugins": ["transform-object-rest-spread"]
 }
