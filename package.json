@@ -2,7 +2,7 @@
   "name": "react-radar-chart",
   "version": "1.0.19",
   "description": "A simple radar chart React component",
-  "main": "dist/react-radar-chart.js",
+  "main": "dist/react-radar-chart.cjs.js",
   "jsnext:main": "dist/react-radar-chart.esm.js",
   "module": "dist/react-radar-chart.esm.js",
   "unpkg": "dist/react-radar-chart.min.js",
