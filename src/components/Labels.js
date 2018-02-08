@@ -39,7 +39,7 @@ const Labels =({chartWidth, className, coordinateGroup}) => (
 					>
 					{name}
 				</text>
-			)
+			);
 		})}
 	</g>
 );
