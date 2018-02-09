@@ -4,7 +4,7 @@ react-radar-chart is intended to be a simple solution for those seeking a standa
 
 ## Installation
 
-The easiest way to use react-radar-chart is to install it from npm and build it into your app with Webpack. (this package is curently inactive)
+The easiest way to use react-radar-chart is to install it from npm and build it into your app with Webpack.
 
 ```
 npm install react-radar-chart
@@ -15,6 +15,15 @@ Then just import react-radar-chart into your project and you're all set!
 ```
 import RadarChart from 'react-radar-chart';
 ```
+
+You may also want to use the standalone UMD build.  If so, just include react-radar-chart.min.js and react-radar-chart.min.css in your page, along with it's dependencies.
+
+```
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+```
+
 
 ## Props
 

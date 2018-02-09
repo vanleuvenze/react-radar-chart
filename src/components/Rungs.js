@@ -11,7 +11,7 @@ const Rungs = ({className, centerPoint, chartWidth, numRungs}) => (
 				cy={centerPoint}
 				r={i * (chartWidth / numRungs) / 2}
 				stroke="black"
-				strokeWidth="1"
+				strokeWidth={i === numRungs ? 2 : 1}
 				fill="none"
 				/>
 		))}
